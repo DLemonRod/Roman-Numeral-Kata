@@ -1,0 +1,18 @@
+def numb_to_rome(x):
+    numbers = [1,4,5,9,10,40,50,90,100,400,500,900,1000]
+    numeral = ['I','IV','V','IX','X','XL','L','XC','C','CD','D','CM','M']
+    i = 12
+    roman_numeral = ''
+    while x !=0:
+        if numbers[i] <= x:
+            roman_numeral += numeral[i]
+            x = x - numbers[i]
+        else:
+            i -= 1
+    return roman_numeral
+
+print(numb_to_rome(8))
+print(numb_to_rome(255))
+print(numb_to_rome(11))
+print(numb_to_rome(899))
+print(numb_to_rome(203))
